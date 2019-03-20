@@ -91,6 +91,7 @@ class SafeWebview extends react.PureComponent {
     // We set the version GET parameters here.
     url.searchParams.set(ETCHER_VERSION_PARAM, packageJSON.version)
     url.searchParams.set(API_VERSION_PARAM, API_VERSION)
+    url.searchParams.set('optOutAnalytics', !settings.get('errorReporting'))
 
     this.entryHref = url.href
 
